@@ -1,4 +1,4 @@
-= new technology -- 
+= shellspec -- a behavior-driven development (BDD) testing framework for shell scripts written in bash, dash, ksh, zsh and other POSIX compatible shells.
 :backend: asciidoctor
 :github-flavored:  // enables GitHub-specific features like tables, task lists, and fenced code blocks
 ifndef::env-github[:icons: font]
@@ -17,9 +17,17 @@ endif::[]
 
 == Discover
 
+Projects using shellspec: +
+https://shellspec.info/
+
+Project examples: +
+https://github.com/snyk/cli/tree/master/test/smoke/spec
+
 
 == Learn
 
+Tutorial: +
+https://github.com/shellspec/shellspec/tree/master
 
 == Cultivate
 
