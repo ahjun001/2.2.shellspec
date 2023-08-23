@@ -1,0 +1,32 @@
+= Test if script is being sourced by ShellSpec or not
+:backend: asciidoctor
+:github-flavored:  // enables GitHub-specific features like tables, task lists, and fenced code blocks
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+// Naughty Waco Temps
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+endif::[]
+:toc: // gets a ToC after the title
+:toclevels: 1
+// :sectnums: // gets ToC sections to be numbered
+:sectnumlevels: 3 // max # of numbering levels
+
+== Situation
+- the value of variables in bash scripts impacts running performance
+- script should be tested under a variety of variables values condition
+
+== Problem
+- script and ShellSpec don't share their variable environment, so ShellSpec cannot supersede variable values in script.
+- script can be run from tty, or sourced from another script -- one that is not ShellSpec.  
+
+== Resolution
+- The only 'trace' that differentiate a bash script run from ShellSpec and from another source is that `pgrep -af "$0"` would return a relative path link when ran from ShellSpec, and a full path link when not ran from ShellSpec.
+- Hence this script.sh script_spec.sh solution, allowing the following:
+-- test a variety of values for variables can be written in script_spec.sh
+-- use these values in the script when ShellSpec-ed, letting the script use other values at convenience
+
+
