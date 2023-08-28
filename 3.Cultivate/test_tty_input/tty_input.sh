@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 
-# set -euo pipefail
+set -euo pipefail
 
-confirm() {
-    echo $'confirm : Entering'
-    read -rsn 1 -p $'Press "n" to return\n' REPLY
-    [[ $REPLY == "n" ]] && return
-    echo $'confirm : Have not returned yet'
-}
+# shellcheck source=/dev/null
+. ./lib_pj.sh
 
 confirm
 
