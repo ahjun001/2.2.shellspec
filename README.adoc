@@ -27,7 +27,9 @@ https://github.com/snyk/cli/tree/master/test/smoke/spec
 == Learn
 
 Tutorial: +
-https://github.com/shellspec/shellspec/tree/master
+https://github.com/shellspec/shellspec#tutorial +
+https://github.com/shellspec/shellspec/blob/master/docs/references.md#references
+
 
 == Cultivate
 
@@ -36,4 +38,9 @@ https://github.com/shellspec/shellspec/tree/master
 
 
 == Todo
+
+* enhance tests on formating macro so that they can be used
+* make boiler plate in bash
+* make tests for the 52 'bashisms'
+
 
