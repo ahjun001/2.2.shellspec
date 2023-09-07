@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ,shellspec_format_spec.sh
+# my_text.sh
 
 eval "$(shellspec - -c) exit 1"
 
