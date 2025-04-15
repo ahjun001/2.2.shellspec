@@ -8,7 +8,7 @@ confirm() {
     [[ $REPLY == "n" ]] && {
         touch /tmp/empty_dirs.txt
         echo $'Removing should be performed outside this script. Exiting ...\n'
-        nemo /tmp/empty_dirs.txt
+        dolphin --new /tmp/empty_dirs.txt
         return 1
     }
     echo $'confirm : Have not returned yet'
